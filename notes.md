@@ -28,6 +28,10 @@ https://tools.ietf.org/html/rfc7033
 
 https://github.com/tootsuite/goldfinger/blob/master/lib/goldfinger/client.rb
 
+GDPR comliance thread
+https://github.com/tootsuite/mastodon/issues/7280
+
+
 # Federate you, federate me
 
 What's the thing that Facebook and Twitter will never do?
