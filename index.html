@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Federate you, federate me | Mastodon, decentralized, open source social networks and the world!</title>
+    <style>
+     .bg-cover {
+       background-size: cover;
+     }
+     .light-text {
+       color: white
+     }
+     .img-m {
+       width: 800px;
+     }
+     .img-m img {
+       width: 100%;
+     }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+      background-image: url(assets/elephant-friend.png)
+      background-size: 100%%
+      class: center, middle
+
+      # Federate you, federate me
+
+      RUG::B - [lislis](https://github.com/lislis) - Mai 2018
+
+      ---
+
+      ## What is the thing that Facebook and Twitter will never do?
+
+      --
+
+      A) Stop vendor locking their platforms.
+
+      --
+
+      B) Open source their algorithms.
+
+      --
+
+      C) Care for the safety and well-being of their users.
+
+      --
+
+      All of the above.
+
+      ---
+
+      class: center, middle
+
+      ## What else to do?
+
+      ## Where else to go?
+
+      ---
+
+      background-image: url(assets/whatif.jpg)
+      class: light-text, bg-cover
+
+      ## What if I told you
+
+      --
+
+      ### open source, decentralized, standards-based social networks where people care
+
+      --
+
+      ## already exist.
+
+      ---
+
+      background-image: url(assets/joinmastodon.png)
+
+      ---
+
+      # Mastodon
+
+      --
+
+      - open source, decentralized micro-blogging framework
+
+      --
+
+      - published in October 2016 by [Gargron](https://github.com/Gargron)
+
+      --
+
+      - Available at [github.com/tootsuite/mastodon](https://github.com/tootsuite/mastodon) under AGPL-3.0
+
+      - huge mainstream success
+
+      ---
+
+      # Goals of Mastodon
+
+      - safe space for people and their communities
+
+      - be independent, yet connected
+
+      - learn from the mistakes of past social networks
+
+      ---
+
+      background-image: url(assets/mastodon-screenshot.png)
+
+      ---
+
+      # Community and culture
+
+      --
+
+      - instance culture (check `/about/more`)
+
+      --
+
+      - toot, awoo and birdsite
+
+      --
+
+      - Sensitive media, content Warnings
+
+      --
+
+      Extensive guide in [this gist by joyeusenoelle](https://gist.github.com/joyeusenoelle/74f6e6c0f349651349a0df9ae4582969#what-are-the-rules)
+
+      ## And bots!
+
+      ---
+
+      background-image: url(assets/catfriends.png)
+
+      ---
+
+      background-image: url(assets/kazha.png)
+
+      ---
+
+      background-image: url(assets/marx-self-care.png)
+
+      ---
+
+      background-image: url(assets/owl-statue.png)
+
+      ---
+
+      # How does it work?
+
+      --
+
+      - host your own instance or join a public one
+
+      --
+
+      - follow people on your own instance or on any other
+
+      --
+
+      - toot what what's on your mind
+
+      --
+
+      - your toot appears in your subscribers' timeline **
+
+      ** depending on your privacy settings
+
+      ---
+
+      class: center, middle
+      # Ok, but how does it really work?
+
+      ---
+
+      background-image: url(assets/magic.gif)
+      class: bg-cover, light-text, middle, center
+
+      # Federation
+
+      ---
+
+      # A brief history of federation
+
+      --
+
+      - OStatus
+        .img-m[
+          ![ostatus](assets/ostatus.png)]
+
+      ---
+
+      # A brief history of federation
+
+      - OStatus
+
+        - collection of standards for decentralized social networking
+
+      --
+
+        - PubSubHubbub (now WebSub), ActivityStreams, Salmon, Protable Contacts, Webfinger
+
+      --
+
+      - implemented by Status.net, Identi.ca
+
+      --
+
+      - Status.net was merged in GNU Social
+
+      --
+
+      - Identi.ca switched to protocol developed by [pump.io](http://pump.io/) and [MediaGoblin](https://mediagoblin.org/)
+
+      ---
+
+      # A brief history of federation
+
+      --
+
+      - W3C (community WG, opened 2012) supposed to further develop the OStatus standard
+
+      --
+
+      -  Federated Social Web WG (opened 2014) chooses ActivityPub (based on pump.io's adaption of OStatus) as official successor to the OStatus standard
+
+      --
+
+      - [ActivityPub](https://www.w3.org/TR/activitypub/) is now the W3C recommendation for decentralized social networking
+
+      ---
+
+      # Who implements ActivityPub?
+
+      - [GNU Social](https://www.gnu.org/software/social/)
+
+      - [Friendica](https://friendi.ca/)
+
+      - [Hubzilla](https://project.hubzilla.org/page/hubzilla/hubzilla-project)
+
+      - [Mastodon](https://joinmastodon.org/)
+
+      and probably a lot more!
+
+      ---
+
+      # How does ActivityPub work?
+
+      --
+
+      - Server to server federation protocol
+
+      --
+
+      - Client to server protocol
+
+
+      _Illustrations and examples taken from https://www.w3.org/TR/activitypub/_
+
+      ---
+
+      background-image: url(assets/tutorial-1.png)
+
+      ### Every 'actor' has an inbox and outbox
+
+      ---
+
+      ### Example ActivityStreams description
+
+      ```json
+      {"@context": "https://www.w3.org/ns/activitystreams",
+      "type": "Person",
+      "id": "https://social.example/alyssa/",
+      "name": "Alyssa P. Hacker",
+      "preferredUsername": "alyssa",
+      "summary": "Lisp enthusiast hailing from MIT",
+      "inbox": "https://social.example/alyssa/inbox/",
+      "outbox": "https://social.example/alyssa/outbox/",
+      "followers": "https://social.example/alyssa/followers/",
+      "following": "https://social.example/alyssa/following/",
+      "liked": "https://social.example/alyssa/liked/"}
+      ```
+
+      ---
+
+      background-image: url(assets/tutorial-2.png)
+
+      ### Communicating with the outside world via HTTP
+
+      ---
+
+      ### Example POST'ing a note to Ben
+
+      ```json
+      {"@context": "https://www.w3.org/ns/activitystreams",
+      "type": "Note",
+      "to": ["https://chatty.example/ben/"],
+      "attributedTo": "https://social.example/alyssa/",
+      "content": "Say, did you finish reading that book I lent you?"}
+      ```
+
+      .center[![tutorial 3](assets/tutorial-3.png)]
+
+      ---
+
+      ### Wrapping it in a `Create` activity
+
+      ```json
+      {"@context": "https://www.w3.org/ns/activitystreams",
+      "type": "Create",
+      "id": "https://social.example/alyssa/posts/a29a6843-9feb-4c74-a7f7-081b9c9201d3",
+      "to": ["https://chatty.example/ben/"],
+      "actor": "https://social.example/alyssa/",
+      "object": {"type": "Note",
+            "id": "https://social.example/alyssa/posts/49e2d03d-b53a-4c4c-a95c-94a6abf45a19",
+            "attributedTo": "https://social.example/alyssa/",
+            "to": ["https://chatty.example/ben/"],
+            "content": "Say, did you finish reading that book I lent you?"}}
+      ```
+
+      ---
+
+      ## Why wrap the `Note?`
+
+      --
+
+      - ActivityPub follows the pattern of 'activities being taken on objects by actors'
+
+      --
+
+      - ActivityStreams provides the [list of available activities (vocabulary)](https://www.w3.org/TR/activitystreams-vocabulary/)
+
+      --
+
+      - Extensible through [JSON LD](https://json-ld.org/)
+
+      ---
+
+      background-image: url(assets/vocabulary.png)
+      ## Activity vocabulary
+
+      ---
+
+      ### The server looks up Ben's ActivityStreams object, gets the inbox and POST's the message
+
+      .center[
+      ![server to inbox](assets/tutorial-4.png)]
+
+      ---
+
+      ### Ben replies
+
+      ```json
+      {"@context": "https://www.w3.org/ns/activitystreams",
+      "type": "Create",
+      "id": "https://chatty.example/ben/p/51086",
+      "to": ["https://social.example/alyssa/"],
+      "actor": "https://chatty.example/ben/",
+      "object": {"type": "Note",
+            "id": "https://chatty.example/ben/p/51085",
+            "attributedTo": "https://chatty.example/ben/",
+            "to": ["https://social.example/alyssa/"],
+            "inReplyTo": "https://social.example/alyssa/posts/49e2d03d-b53a-4c4c-a95c-94a6abf45a19",
+            "content": "<p>Argh, yeah, sorry, I'll get it back to you tomorrow.</p>
+                        <p>I was reviewing the section on register machines,
+                           since it's been a while since I wrote one.</p>"}}
+      ```
+      ---
+
+      ### Like!
+
+      ```json
+      {"@context": "https://www.w3.org/ns/activitystreams",
+      "type": "Like",
+      "id": "https://social.example/alyssa/posts/5312e10e-5110-42e5-a09b-934882b3ecec",
+      "to": ["https://chatty.example/ben/"],
+      "actor": "https://social.example/alyssa/",
+      "object": "https://chatty.example/ben/p/51086"}
+      ```
+      ---
+
+      # Rubbby!
+
+      Mastodon is a standard Ruby on Rails app.
+
+      Find a reference ActivityPub implementation eg here
+
+      [`/app/controllers/activitypub/`](https://github.com/tootsuite/mastodon/tree/master/app/controllers/activitypub)
+
+      ---
+
+      # What about the safe space?
+
+      --
+
+      Custom [protocol extensions](https://github.com/tootsuite/documentation/blob/master/Extensions.md), federation only within Mastodon
+
+      - blocks/unblocks
+
+      --
+
+      - sensitive media
+
+      --
+
+      - Content warnings
+
+      --
+
+      - Privacy features: locked accounts, status privacy, follow requests
+
+      ---
+
+      class: center, middle
+
+      # Bonus!
+
+      ---
+
+      ## Looking up people with Webfinger
+
+      --
+
+      - [Webfinger RFC](https://tools.ietf.org/html/rfc7033)
+
+      --
+
+      - Ruby implementation [`Goldfinger`](https://github.com/tootsuite/goldfinger)
+
+      --
+
+      - try in your browser
+
+        `https://your.instance/.well-known/webfinger?resource=acct:you@your.instance`
+
+
+      ---
+
+      # Thank  you!
+
+      ### Join the Federation today!
+
+      https://joinmastodon.org
+
+      Elephant images from the [Mastodon press kit](https://joinmastodon.org/press-kit.zip)
+
+      -
+
+      Slides available at https://lislis.de/talks/mastodon-federation
+
+      and on https://github.com/lislis/talk-mastodon-federation
+
+    </textarea>
+
+
+    <script src="remark.min.js"></script>
+    <script>var slideshow = remark.create({ratio: '16:9'});</script>
+  </body>
+</html>

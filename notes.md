@@ -7,6 +7,8 @@
 @trendyphraseguy@lesbianschool.com
 @BotEquippedWith@lesbianschool.com
 @TootBot@mastodon.social
+@bobrossbot@social.guizzyordi.info
+@hackers_gifs@botsin.space
 
 
 ## Protocols
@@ -52,44 +54,69 @@ we should know that knowledge means power, and that power in the hand of the few
 
 Open source, decentralized social networks are already walking among us!
 
+# History
+
+A long lineage of decentralized sn lead us to where we are today
+
+
+OStatus
+
+GNU Social / StatusNet
+
+Identica/ Friendica
+
+Hubzilla
+
+Other
+
+diaspora
+
+Matrix/ riot
+
 # Mastodon
 
 One of the new kids on the block is Mastodon.
-- created when?
-- for what purpose?
-- what's special
+- October 2016 by Gargron
+- safety and anti abuse tools
+Learn from the mistakes of the contralized platforms
+and the preceeding social
 
 ## What does it look like?
 
 ## Culture on Mastodon
-- awoo and birdsite
+- instance culture
+- toot, awoo and birdsite
 - bots
 
 ## How does it work?
 - Host your own server
 - follow people on other servers
 - follow hashtags
+- local timeline
+- federated timeline
 
 ## But how does that work?
 Through federation protocols
 
 
 # The federation
-A suite of standards based protocols, some of which recently got acknowledged by the W3C and are now recommendations.
 
-ActivityPub (and ActivityStreams)
+## A bit of history
 
-Webfinger
+OStatus: a set of open, standards based protocols for micro blogging
+PubsubHubbub, ActivityStreams, Salmon, Portable Contacts, Webfinger
+
+## New
+Since January 2018
+ActivityPub is the new W3C recommendation for distributed social networking, based on ActivityStreams!
+
+## We won't cover
+Security and integrity
+- HTTP Signatures
+- Linked Data Signatures
 
 
-HTTP Signatures
-Linked Data Signatures
+# ActiviPub
 
-OStatus
 
-Salmon
-Portable Contracts
-Atom
-Atom ActivityStreams
-Atom threading
-PubSubHubbub (now called WebSub)
+# Webfinger
