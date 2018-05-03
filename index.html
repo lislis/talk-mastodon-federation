@@ -4,17 +4,50 @@
     <meta charset="utf-8">
     <title>Federate you, federate me | Mastodon, decentralized, open source social networks and the world!</title>
     <style>
+     body {
+       font-weight: 800;
+       line-height: 1.55;
+       color: #222;
+     }
+     p, li {
+       font-size: 1.8rem;
+     }
      .bg-cover {
-       background-size: cover;
+       background-size: cover !important;
      }
      .light-text {
-       color: white
+       color: #eee;
+       text-shadow: 2px 2px 0px #222;
      }
      .img-m {
        width: 800px;
      }
      .img-m img {
        width: 100%;
+     }
+     .light-shadow {
+       text-shadow: 2px 2px 0px white;
+     }
+     a {
+       color: inherit;
+       text-decoration: none;
+       border-bottom: 2px dotted #2b90d9;
+       transition: color 100ms ease, border 100ms ease;
+     }
+     a:hover,
+     a:active {
+       color: #2b90d9;
+       border-bottom-style: solid;
+     }
+     .small {
+       font-size: 1rem;
+       font-weight: 400;
+     }
+     code {
+       line-height: 2;
+     }
+     .remark-inline-code {
+       background-color: #ddd;
      }
     </style>
   </head>
@@ -24,9 +57,10 @@
       background-size: 100%%
       class: center, middle
 
-      # Federate you, federate me
+      .light-shadow[
+      # Federate you, federate me]
 
-      RUG::B - [lislis](https://github.com/lislis) - Mai 2018
+      RUG::B - [lislis](https://github.com/lislis) - May 2018
 
       ---
 
@@ -59,21 +93,34 @@
       ---
 
       background-image: url(assets/whatif.jpg)
-      class: light-text, bg-cover
+      class: light-text, bg-cover, center, middle
 
-      ## What if I told you
-
-      --
-
-      ### open source, decentralized, standards-based social networks where people care
+      # What if I told you
 
       --
 
-      ## already exist.
+      ## open source, decentralized, standards-based social networks where people care
+
+      --
+
+      # already exist.
 
       ---
 
       background-image: url(assets/joinmastodon.png)
+
+      ---
+
+      background-image: url(assets/lis-sidewalk.jpg)
+      class: bg-cover
+
+      .light-text[
+      # Hi, I'm Lisa]
+
+      --
+
+      .light-text[
+      ### and I really like decentralized social networks]
 
       ---
 
@@ -89,7 +136,9 @@
 
       --
 
-      - Available at [github.com/tootsuite/mastodon](https://github.com/tootsuite/mastodon) under AGPL-3.0
+      - available at [github.com/tootsuite/mastodon](https://github.com/tootsuite/mastodon) under AGPL-3.0
+
+      --
 
       - huge mainstream success
 
@@ -97,11 +146,17 @@
 
       # Goals of Mastodon
 
+      --
+
       - safe space for people and their communities
 
-      - be independent, yet connected
+      --
 
-      - learn from the mistakes of past social networks
+      - people in control, not companies
+
+      --
+
+      - learn from the mistakes of other social networks
 
       ---
 
@@ -121,11 +176,13 @@
 
       --
 
-      - Sensitive media, content Warnings
+      - sensitive media, content warnings
 
       --
 
       Extensive guide in [this gist by joyeusenoelle](https://gist.github.com/joyeusenoelle/74f6e6c0f349651349a0df9ae4582969#what-are-the-rules)
+
+      --
 
       ## And bots!
 
@@ -209,17 +266,16 @@
 
       - Status.net was merged in GNU Social
 
-      --
-
-      - Identi.ca switched to protocol developed by [pump.io](http://pump.io/) and [MediaGoblin](https://mediagoblin.org/)
-
       ---
 
       # A brief history of federation
 
       --
+      - Identi.ca switched to protocol developed by [pump.io](http://pump.io/) and [MediaGoblin](https://mediagoblin.org/)
 
-      - W3C (community WG, opened 2012) supposed to further develop the OStatus standard
+      --
+
+      - W3C (Community WG, opened 2012) supposed to further develop the OStatus standard
 
       --
 
@@ -255,8 +311,9 @@
 
       - Client to server protocol
 
+      --
 
-      _Illustrations and examples taken from https://www.w3.org/TR/activitypub/_
+      .small[_Illustrations and examples taken from https://www.w3.org/TR/activitypub/_]
 
       ---
 
@@ -396,6 +453,8 @@
 
       Custom [protocol extensions](https://github.com/tootsuite/documentation/blob/master/Extensions.md), federation only within Mastodon
 
+      --
+
       - blocks/unblocks
 
       --
@@ -404,11 +463,27 @@
 
       --
 
-      - Content warnings
+      - content warnings
 
       --
 
       - Privacy features: locked accounts, status privacy, follow requests
+
+      ---
+
+      # Thank  you!
+
+      ### Join the Federation today!
+
+      https://joinmastodon.org
+
+      Elephant images from the [Mastodon press kit](https://joinmastodon.org/press-kit.zip)
+
+      -
+
+      Slides available at https://lislis.de/talks/mastodon-federation
+
+      and on https://github.com/lislis/talk-mastodon-federation
 
       ---
 
@@ -435,21 +510,6 @@
         `https://your.instance/.well-known/webfinger?resource=acct:you@your.instance`
 
 
-      ---
-
-      # Thank  you!
-
-      ### Join the Federation today!
-
-      https://joinmastodon.org
-
-      Elephant images from the [Mastodon press kit](https://joinmastodon.org/press-kit.zip)
-
-      -
-
-      Slides available at https://lislis.de/talks/mastodon-federation
-
-      and on https://github.com/lislis/talk-mastodon-federation
 
     </textarea>
 
